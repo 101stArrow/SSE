@@ -1,0 +1,15 @@
+<template name="hero">
+	<table class="table table-condensed pull-right">
+				<tr><th>Name</th><th>Alias</th><th>Main Power</th><th>Alignment</th><th>Universe</th>{{#if currentUser}}<th>Delete</th>{{/if}}</tr>
+  			{{#each heroes}}
+			<tr>
+				<td>{{name}}</td>
+				<td>{{alias}}</td>
+				<td>{{mainpower}}</td>
+				<td>{{alignment}}</td>
+				<td>{{universe}}</td>
+				{{#if currentUser}}<td><button id="delete">&times;</button></td>{{/if}}
+			</tr>
+  			{{/each}}
+			</table>
+</template>
