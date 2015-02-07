@@ -3,7 +3,7 @@ Heroes = new Mongo.Collection("heroes");
 if (Meteor.isClient) {
   Template.hero.helpers({
     heroes: function () {
-      return Heroes.find({}, {sort:{alias: 1}});
+      return Heroes.find({}, {sort:{name: 1}});
     }
   });
   Template.hero.helpers({
