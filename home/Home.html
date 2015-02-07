@@ -1,17 +1,12 @@
-<head>
-  <title>SSE</title>
-</head>
-
-<body>
-	{{> menu}}<br><br>
+<template name="Home">
+	{{> Nav}}<br><br>
 	<main>
 		<div class="container">
 		<div class="jumbotron"><h1>Superhero Search Engine</h1></div>
-		{{#if currentUser}}<div>{{> newhero}}</div>{{/if}}
 			<div class="panel">
 
 				{{> hero}}
 		</div>
 	</div>
 	</main>
-</body>
+</template>

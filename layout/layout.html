@@ -1,4 +1,17 @@
-<template name="menu">
+<head>
+	<title>SSE</title>
+</head>
+
+<template name="layout">
+  <div class="container">
+    <header>
+      {{> nav }}
+    </header>
+    {{> yield}}
+  </div>
+</template>
+
+<template name="nav">
   <div class="navbar navbar-static-top">
     <div class="navbar-inner">
       <a class="brand" href="#">SSE</a>
