@@ -6,9 +6,9 @@
 
 meteor-platform
 autopublish
-bootstrap
-accounts-ui
 accounts-password
 insecure
-iron-router
 spacebars
+iron:router
+mrt:bootstrap-3
+mrt:accounts-ui-bootstrap-3

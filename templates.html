@@ -1,15 +1,87 @@
+<template name="layout">
+  {{> yield}}
+</template>
+<template name="Home">
+  {{> Nav}}
+  <div class="container">
+    <h1>Home <small>Page</small></h1>
+    <p>
+      Welcome to SSE
+    </p>
+    <p>
+      This is the Superhero Search Engine, or more correctly the Superhero Database
+      but search will be implemented soon, so bear wih us.
+    </p>
+  </div>
+</template>
+
+<template name="Heroes">
+  {{> Nav}}
+  <div class="container">
+    <h1>Hero <small>Database</small></h1>
+    {{> hero}}
+  </div>
+</template>
+
+<template name="addheroes">
+  {{> Nav}}
+  <div class="container">
+    <h1>Add <small>Heroes</small></h1>
+    <div>
+      <form name="new-hero" id="new-hero">
+        <input name="name" id="name" placeholder="Enter Name"/><br>
+        <input name="alias" id="alias" placeholder="Enter Alias"/><br>
+        <input name="mainpower" id="mainpower" placeholder="Enter Power"/><br><input name="alignment" id="alignment" placeholder="Enter Alignment"/><br>
+        <input name="universe" id="universe" placeholder="Enter Universe"/><br>
+        <input type="submit" value="Submit">
+        </form>
+    </div>
+  </div>
+</template>
+
+<template name="Nav">
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">SSE</a>
+        </div>
+        <center>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a>
+                    </li>
+                    <li><a href="/heroes">Heroes</a>
+                    </li>
+                    {{#if currentUser}}<li><a href="/addheroes">AddHero</a>
+                    </li>{{/if}}
+                </ul>
+                <ui class="nav navbar-nav navbar-right">
+                  {{> loginButtons}}
+                </ui>
+            </div>
+        </center>
+    </div>
+  </div>
+  <br><br>
+</template>
+
 <template name="hero">
-	<table class="table table-condensed pull-right">
-				<tr><th>Name</th><th>Alias</th><th>Main Power</th><th>Alignment</th><th>Universe</th>{{#if currentUser}}<th>Delete</th>{{/if}}</tr>
-  			{{#each heroes}}
-			<tr>
-				<td>{{name}}</td>
-				<td>{{alias}}</td>
-				<td>{{mainpower}}</td>
-				<td>{{alignment}}</td>
-				<td>{{universe}}</td>
-				{{#if currentUser}}<td><button id="delete">&times;</button></td>{{/if}}
-			</tr>
-  			{{/each}}
-			</table>
+  <table class="table table-condensed pull-right">
+        <tr><th>Name</th><th>Alias</th><th>Main Power</th><th>Alignment</th><th>Universe</th>{{#if currentUser}}<th>Delete</th>{{/if}}</tr>
+        {{#each heroes}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{alias}}</td>
+        <td>{{mainpower}}</td>
+        <td>{{alignment}}</td>
+        <td>{{universe}}</td>
+        {{#if currentUser}}<td><button id="delete">&times;</button></td>{{/if}}
+      </tr>
+        {{/each}}
+      </table>
 </template>
