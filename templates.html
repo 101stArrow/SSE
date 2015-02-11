@@ -27,15 +27,30 @@
   {{> Nav}}
   <div class="container">
     <h1>Add <small>Heroes</small></h1>
-    <div>
-      <form name="new-hero" id="new-hero">
-        <input name="name" id="name" placeholder="Enter Name"/><br>
-        <input name="alias" id="alias" placeholder="Enter Alias"/><br>
-        <input name="mainpower" id="mainpower" placeholder="Enter Power"/><br><input name="alignment" id="alignment" placeholder="Enter Alignment"/><br>
-        <input name="universe" id="universe" placeholder="Enter Universe"/><br>
-        <input type="submit" value="Submit">
-        </form>
-    </div>
+    <form name="new-hero" id="new-hero">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input name="name" id="name" class="form-control" placeholder="Enter Name"/>
+      </div>
+      <div class='form-group'>
+        <label for='alias'>Alias:</label>
+        <input name="alias" id="alias" class="form-control" placeholder="Enter Alias"/>
+      </div>
+      <div class='form-group'>
+        <label for='mainpower'>Main Power:</label>
+        <input name="mainpower" id="mainpower" class="form-control" placeholder="Enter Power"/>
+      </div>
+      <div class='form-group'>
+        <label for='alignment'>Alignment:</label>
+        <input name="alignment" id="alignment" class="form-control" placeholder="Enter Alignment"/>
+      </div>
+      <div class='form-group'>
+        <label for='universe'>Universe:</label>
+        <input name="universe" id="universe" class="form-control" placeholder="Enter Universe"/>
+      </div>
+        <input type="submit" value="Submit" class="btn btn-default">
+
+    </form>
   </div>
 </template>
 
