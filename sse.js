@@ -40,7 +40,7 @@ if (Meteor.isClient) {
 			universe: universe,
 			CreatedBy: Meteor.user().username,
 			createdAt: new Date() // current time
-		});newhero
+		})
 
 		// Clear form
 		event.target.name.value = "";
