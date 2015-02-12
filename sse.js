@@ -59,7 +59,7 @@ if (Meteor.isClient) {
 	}
 });
 	Accounts.config({
-	forbidClientAccountCreation : false,
+	forbidClientAccountCreation : true,
 	sendVerificationEmail : true,
 });
 	Accounts.ui.config({
