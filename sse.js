@@ -46,7 +46,6 @@ if (Meteor.isClient) {
 		event.target.name.value = "";
 		event.target.alias.value = "";
 		event.target.mainpower.value = "";
-		event.target.alignment.value = "";
 		event.target.universe.value = "";
 
 		// Prevent default form submit
