@@ -1,15 +1,13 @@
 Router.route('/', function () {
-	// render the Home template with a custom data context
 	this.render('Home');
 });
 
-// when you navigate to "/one" automatically render the template named "One".
 Router.route('/heroes');
-
-// when you navigate to "/two" automatically render the template named "Two".
 Router.route('/addheroes');
+Router.route('/chat')
 
 Heroes = new Mongo.Collection("heroes");
+Messages = new Mongo.Collection("messages")
 
 if (Meteor.isClient) {
 	Template.hero.helpers({
@@ -17,6 +15,11 @@ if (Meteor.isClient) {
 			return Heroes.find({}, {sort:{name: 1}});
 		}
 	});
+	Template.chat.helpers({
+		messages: function () {
+			return Messages.find({}, {sort:{time: 1}});
+		}
+	})
 	Template.hero.helpers({
 		heroCount: function() {
 			return Heroes.count();

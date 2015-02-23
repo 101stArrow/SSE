@@ -7,7 +7,7 @@
 <template name="Home">
   {{> Nav}}
   <div class="container">
-    <h1>Home <small>Page</small></h1>
+    <h1>SSE <small>Home</small></h1>
     <p>
       Welcome to SSE
     </p>
@@ -21,7 +21,7 @@
 <template name="Heroes">
   {{> Nav}}
   <div class="container">
-    <h1>Hero <small>Database</small></h1>
+    <h1>SSE <small>Heroes</small></h1>
     {{> hero}}
   </div>
 </template>
@@ -29,7 +29,7 @@
 <template name="addheroes">
   {{> Nav}}
   <div class="container">
-    <h1>Add <small>Heroes</small></h1>
+    <h1>SSE <small>Add</small></h1>
     <form name="new-hero" id="new-hero">
       <div class="form-group">
         <label for="name">Name:</label>
@@ -104,4 +104,18 @@
       </tr>
         {{/each}}
       </table>
+</template>
+
+<template name="Chat">
+  {{> Nav}}
+  <div class="container">
+    <h1>SSE <small>Chat</small></h1>
+	  <table class="table table-condensed table-hover pull-right">
+		  <tr><th>User</th><th>Message</th><th>Time</th></tr>
+		  {{#each messages}}
+		  	<tr><td>{{username}}</td><td>{{message}}</td><td>{{time}}</td></tr>
+		  {{/each}}
+	  </table>
+      <input name="message" id="message" class="form-control" placeholder="Enter Message..."/>
+  </div>
 </template>
