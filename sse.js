@@ -27,7 +27,7 @@ if (Meteor.isClient) {
 	});
 	Template.addheroes.events({
 	"submit #new-hero": function (event) {
-		// This function is called when the new task form is submitted
+		// This function is called when the new hero form is submitted
 
 		var name = event.target.name.value;
 		var alias = event.target.alias.value;
