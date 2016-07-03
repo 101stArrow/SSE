@@ -1,8 +1,8 @@
-SSE - Superhero Search Engine
+Abandoned - SSE - Superhero Search Engine
 ===
 ## About
 
-SSE aka Superhero Search Engine is a Search Engine / Database for Superheroes. This is will be just an idea by a high school students, probably never developed any further. I am just using this to improve my skills, including but not limited to:
+SSE aka Superhero Search Engine is a Search Engine / Database for Superheroes. This is will be just an idea by a high school students, probably never developed any further. I am just using this to improve my skills, including:
 
 * HTML
 * CSS
@@ -25,7 +25,7 @@ Many people may not agree with my choice of using Meteor, but my main problem wi
 
 ## The future
 
-This project, now after about a month, has reached it's first complete version. I am planning to add many things including:
+~~This project, now after about a month (June 2015), has reached it's first complete version. I am planning to add many things including:
 
 * Search Functionality
 * Ability to edit (if logged in)
@@ -36,8 +36,5 @@ Optionally;
 
 * Make a hero of the day (Randomly generated)
 * Mailing list for hero of the day
-* Member list
 
-## Final Thought
-
-Thank you for getting all the way to the end, if you have, (Just imagine me standing up and taking a bow) and I would like to thank those who have helped me make this a reality. (A bow to them too)
+~~
