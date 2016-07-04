@@ -25,16 +25,4 @@ Many people may not agree with my choice of using Meteor, but my main problem wi
 
 ## The future
 
-~~This project, now after about a month (June 2015), has reached it's first complete version. I am planning to add many things including:
-
-* Search Functionality
-* Ability to edit (if logged in)
-* Ability to add if not logged in
-* Authorization for heroes not added by member
-
-Optionally;
-
-* Make a hero of the day (Randomly generated)
-* Mailing list for hero of the day
-
-~~
+This project is abandoned, feel free (not that anyone will want to) to build upon this.
